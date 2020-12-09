@@ -1,9 +1,9 @@
 import sys
 
 class TrainOptions(object):
-    dataroot = '<your dataset folder, [LQ;HQ]>'
+    dataroot = '/home/ubuntu/data/hifacegan/Snowden_face_small'
     dataroot_assist = ''
-    name = '<your experiment name>'
+    name = '4xsr'
     crop_size = 512
 
     gpu_ids = [0]  # set to [] for CPU-only training (not tested)
@@ -90,7 +90,9 @@ class TrainOptions(object):
 
 
 class TestOptions(object):
-    name = '<must be the same as TrainOptions.name>'
+    dataroot = '/home/ubuntu/data/hifacegan/Trump_down'
+    dataroot_assist = ''    
+    name = 'face_renov'
     results_dir = './results/'
     gpu_ids = [0]
     crop_size = 512
@@ -121,9 +123,9 @@ class TestOptions(object):
     # make sure the following options match the TrainOptions
     model = 'pix2pix'
     nThreads = 0
-    netG = 'hifacegan'
+    netG = 'lipspade'
     nef = 16
-    ngf = 64 
+    ngf = 48 
     no_flip = True
     no_instance = True
     no_pairing_check = False
