@@ -90,10 +90,10 @@ class TrainOptions(object):
 
 
 class TestOptions(object):
-    dataroot = '/home/ubuntu/data/hifacegan/Trump_down'
-    dataroot_assist = ''    
     name = 'face_renov'
-    results_dir = './results/'
+    dataroot = '/home/ubuntu/data/SR/Trump512_down'
+    results_dir = './results/Trump512'
+    dataroot_assist = ''
     gpu_ids = [0]
     crop_size = 512
     dataset_mode = 'test'

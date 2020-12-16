@@ -70,4 +70,4 @@ for i, data_i in tqdm(enumerate(dataloader)):
         im[:,:h] = im1
         im[:,h:2*h] = im2
         
-        cv2.imwrite(os.path.join(save_path, name+'.jpg'), im[:,:,::-1])
+        cv2.imwrite(os.path.join(save_path, name+'.png'), im[:,:,::-1])

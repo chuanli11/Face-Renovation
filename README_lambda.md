@@ -31,12 +31,15 @@ Download pretrained model from [here](https://yadi.sk/d/Pl_hxVZPa_PHew). Unzip i
 
 Set the path to your testing in `degrade_lambda.py` and `config_hifacegan.py`.
 
+```
+python degrade_lambda.py
+```
 
 # Run
 
 ```
-python degrade_lambda.py
 python test_lambda.py
+
 ```
 
 

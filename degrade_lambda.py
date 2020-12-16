@@ -82,5 +82,5 @@ def create_mixed_dataset(input_dir, suffix='full'):
 
 if __name__ == '__main__':
     suffix = 'down' # [same/down/16x/noise/blur/jpeg/full]
-    source_dir = '/home/ubuntu/data/hifacegan/Trump'
+    source_dir = '/home/ubuntu/data/SR/Trump512'
     create_mixed_dataset(source_dir, suffix)
