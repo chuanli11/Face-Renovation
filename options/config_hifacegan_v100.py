@@ -1,12 +1,12 @@
 import sys
 
 class TrainOptions(object):
-    dataroot = '/home/ubuntu/data/hifacegan/Snowden_face_small'
+    dataroot = '/mnt/data/chuan/data/WholeFace512x512_Cleaned_unpacked/all_full'
     dataroot_assist = ''
-    name = '4xsr'
+    name = 'chuan'
     crop_size = 512
 
-    gpu_ids = [0]  # set to [] for CPU-only training (not tested)
+    gpu_ids = [0,1,2,3]  # set to [] for CPU-only training (not tested)
     gan_mode = 'ls'
 
     continue_train = False
@@ -14,7 +14,7 @@ class TrainOptions(object):
 
     D_steps_per_G = 1
     aspect_ratio = 1.0
-    batchSize = 2
+    batchSize = 16 # need to be scaled by the number of GPUs
     beta1 = 0.0
     beta2 = 0.9
     cache_filelist_read = True
@@ -57,8 +57,8 @@ class TrainOptions(object):
     netD_subarch = 'n_layer'
     netG = 'hifacegan'  # spade, lipspade
     ngf = 64  # set to 48 for Titan X 12GB card
-    niter = 30
-    niter_decay = 20
+    niter = 10
+    niter_decay = 5
     no_TTUR = False
     no_flip = False
     no_ganFeat_loss = False
@@ -90,9 +90,9 @@ class TrainOptions(object):
 
 
 class TestOptions(object):
-    name = 'face_renov'
-    dataroot = '/home/ubuntu/data/SR/Trump512_down'
-    results_dir = './results/Trump512'
+    name = 'chuan'
+    dataroot = '/media/ubuntu/Data/unpacked_WholeFace512x512_Cleaned/test_full'
+    results_dir = './results/chuan'
     dataroot_assist = ''
     gpu_ids = [0]
     crop_size = 512
@@ -123,9 +123,9 @@ class TestOptions(object):
     # make sure the following options match the TrainOptions
     model = 'pix2pix'
     nThreads = 0
-    netG = 'lipspade'
+    netG = 'hifacegan'
     nef = 16
-    ngf = 48 
+    ngf = 64 
     no_flip = True
     no_instance = True
     no_pairing_check = False

@@ -1,12 +1,13 @@
 import sys,torch
 from collections import OrderedDict
 # change config file for ablation study
-from options.config_hifacegan import TrainOptions
+from options.config_hifacegan_local import TrainOptions
 import data
 from util.iter_counter import IterationCounter
 from util.visualizer import Visualizer
 from trainers.pix2pix_trainer import Pix2PixTrainer
-torch.backends.cudnn.benchmark = True
+
+torch.backends.cudnn.benchmark = False
 
 opt = TrainOptions()
 

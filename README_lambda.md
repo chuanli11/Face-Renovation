@@ -43,3 +43,10 @@ python test_lambda.py
 ```
 
 
+# Train
+
+
+```
+total_epochs = opt.niter + opt.niter_decay
+
+```

@@ -13,7 +13,7 @@ from tqdm import tqdm
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
-torch.backends.cudnn.benchmark = True
+torch.backends.cudnn.benchmark = False
 
 opt = TestOptions()
 dataloader = data.create_dataloader(opt)
